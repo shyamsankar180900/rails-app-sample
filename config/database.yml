@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: myapp_development
+  host: ror-sample.cakidksrmeek.ap-south-1.rds.amazonaws.com
+  port: 5432
+  username: postgres
+  password: master321
+
+
+test:
+  <<: *default
+  database: myapp_test
+  host: ror-sample.cakidksrmeek.ap-south-1.rds.amazonaws.com
+  port: 5432
+  username: postgres
+  password: master321
