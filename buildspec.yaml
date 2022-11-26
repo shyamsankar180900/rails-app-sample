@@ -14,7 +14,7 @@ phases:
     - $(aws ecr get-login --no-include-email --region ap-south-1)
     - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
     - IMAGE_TAG=${COMMIT_HASH:=latest}
-    - REPOSITORY_URI=246138024931.dkr.ecr.ap-south-1.amazonaws.com/ruby:latest
+    - REPOSITORY_URI=246138024931.dkr.ecr.ap-south-1.amazonaws.com/ruby
   build:
     commands:
     - echo Build started on `date`
