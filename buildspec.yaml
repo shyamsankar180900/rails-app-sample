@@ -27,10 +27,10 @@ phases:
     commands:
     - echo Build completed on `date`
     - echo pushing to repo
-    # update the following line with the URI of your own ECR repository
     - docker push $REPOSITORY_URI:$IMAGE_TAG
     - echo Writing image definitions file...
     - printf '[{"name":"ruby","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+ 
 artifacts:
   files:
     - imagedefinitions.json
