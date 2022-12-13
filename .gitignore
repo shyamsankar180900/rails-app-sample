@@ -56,3 +56,6 @@ Thumbs.db
 
 # cache
 tmp/*
+
+#Environment variables
+.env
